@@ -1,0 +1,19 @@
+import math
+
+def isPerfectSquare(x):
+    s = int(math.sqrt(x))
+    return s*s == x
+
+def isfibonacci(n):
+    hh=(5*(n*n)+4)
+    bb=(5*(n*n)-4)
+    return(isPerfectSquare(hh) or isPerfectSquare(bb))
+
+a=int(input("enter the total number you want to check:-"))
+y=list(map(int, input("enter the numbers:-"). strip(). split()))
+
+for i in y[:]:
+    if (  isfibonacci(i) == True):
+        print("this number",i,"belongs to fibonacci series")
+    else:
+        print("this number",i," does not belongs to fibonacci series")
